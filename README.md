@@ -1,4 +1,4 @@
-## A modal window on ReactJS
+## List of guests (users) on ReactJS
 
 **👀 What is being considered?**
 1. Work with hook useEffect

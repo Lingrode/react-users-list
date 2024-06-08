@@ -1,6 +1,14 @@
 import React from "react";
 
-export const User = ({ id, email, first_name, last_name, avatar }) => (
+export const User = ({
+  id,
+  email,
+  first_name,
+  last_name,
+  avatar,
+  onClickInvite,
+  isInvited,
+}) => (
   <li>
     <div>
       <img className="avatar" src={avatar} alt="User" />
@@ -16,17 +24,11 @@ export const User = ({ id, email, first_name, last_name, avatar }) => (
         </p>
       </div>
     </div>
-    <svg
+    <img
+      onClick={() => onClickInvite(id)}
       className="action"
-      fill="currentColor"
-      viewBox="0 0 16 16"
-      height="1em"
-      width="1em"
-    >
-      <path
-        fillRule="evenodd"
-        d="M8 2a.5.5 0 01.5.5v5h5a.5.5 0 010 1h-5v5a.5.5 0 01-1 0v-5h-5a.5.5 0 010-1h5v-5A.5.5 0 018 2z"
-      />
-    </svg>
+      src={`/assets/${isInvited ? "minus" : "plus"}.svg`}
+      alt="Action"
+    />
   </li>
 );

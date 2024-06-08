@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const Success = ({ count }) => {
   return (
@@ -6,7 +6,9 @@ export const Success = ({ count }) => {
       <img src="/assets/success.svg" alt="Success" />
       <h3>Successfully!</h3>
       <p>An invitation has been sent to all {count} users.</p>
-      <button className="send-invite-btn">Back</button>
+      <button onClick={() => window.location.reload()} className="send-invite-btn">
+        Back
+      </button>
     </div>
   );
 };
